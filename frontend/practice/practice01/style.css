@@ -1,0 +1,24 @@
+h5, p, span, a, strong {
+    background: #2db34a;
+    border-radius: 6px;
+    color: #fff;
+    font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+    padding: 24px 15px;
+    text-align: center;
+  }
+
+  header,
+  section,
+  aside,
+  footer, main, div {
+    margin: 0 1.5% 24px 1.5%;
+  }
+  section {
+    display: inline-block;
+    width: 30%;
+  }
+  p, span, a, strong {
+    background: maroon;
+    color: #fff;
+    margin: 24px 0%;
+  }

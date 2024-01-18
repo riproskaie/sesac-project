@@ -1,0 +1,54 @@
+body {
+  height: 5000px;
+  counter-reset: div_order;
+}
+
+div {
+  width: 150px;
+  height: 150px;
+  margin: 0px auto;
+  padding: 5px;
+  border: 3px solid #222;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+div.static {
+  position: static;
+  left: 200px;
+  top: 20px;
+  background: white;
+  margin-top: 5px;
+}
+
+div.relative {
+  /* 코드 작성 */
+  background: RoyalBlue;
+}
+
+div.fixed {
+  /* 코드 작성 */
+  background: IndianRed;
+}
+
+div.absolute {
+  /* 코드 작성 */
+  background: ForestGreen;
+}
+
+div.sticky {
+  /* 코드 작성 */
+  background: PaleGoldenRod;
+}
+
+div:before {
+  counter-increment: div_order;
+  content: counter(div_order) ". " attr(class);
+  text-transform: capitalize;
+}
+
+div.static:after {
+  content: " (Default)";
+  color: grey;
+  font-size: 0.8rem;
+}

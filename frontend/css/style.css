@@ -1,167 +1,137 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+* {
+  box-sizing: border-box;
+}
 
 html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+body {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+  font-family: Arial, sans-serif;
 }
 
-body {
-  font-family: Arial, sans-serif;
+header {
+  /* 문제1: header를 HTML 문서의 흐름에서 벗어나 언제나 고정된 자리에 있도록 만들어 보세요. */
+
+  width: 100%;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+h1 {
+  text-align: center;
+}
+
+#header-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  text-align: center;
+}
+
+#header-nav li {
+  /* 문제2: 헤더의 리스트의 아이템들이 세로로 정렬될 수 있도록 만들어 보세요. */
+  padding: 10px 10px;
+  width: 20%;
+}
+
+#header-nav li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+#header-nav li a:hover {
+  background-color: #111;
+}
+
+#side-nav {
+  /* 문제3: side의 navbar가 채팅방 안에서만 고정된 위치에 있도록 만들어 보세요. */
+
+  height: 300px;
+  width: 200px;
+  float: left;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+#side-nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+#side-nav li {
+  display: block;
+}
+
+#side-nav li a {
+  /* 문제4: 아래 패딩이 이 아이템들에게는 적용되지 않습니다. 패딩을 가질 수 있도록 해주세요. */
+  /* 참고: reset.css: https://meyerweb.com/eric/tools/css/reset/ */
+  padding: 10px;
+  color: black;
+  border-bottom: 1px solid #ddd;
+}
+
+#side-nav li a:hover {
+  background-color: #f0f0f0;
+}
+
+main {
+  margin-top: 5vh;
+  margin-left: 220px;
 }
 
 #chat-container {
   width: 80%;
   margin: auto;
   max-width: 600px;
-  height: 100vh;
+  height: calc(80vh - 60px);
+  padding-top: 10px;
 }
 
 #chat-box {
-  height: 80%;
+  height: 70%;
   border: 1px solid #ddd;
   margin-bottom: 10px;
   padding: 10px;
   overflow-y: scroll;
 }
 
-#user-input {
+#user-input,
+#send-button {
   width: 80%;
+  display: inline-block;
+  margin: 5px 0;
 }
 
 #send-button {
-  width: 100px;
+  width: 18%;
 }
 
-main {
-  height: 100vh;
+#gallery {
+  text-align: center;
+  margin: 0 auto;
+  border: black solid 1px;
+}
+
+#gallery img {
+  /* 문제5: 이미지들의 크기를 조정할 수 있으면서 가로로 정렬될 수 있도록 만들어 보세요. */
+  display: block;
+  width: 200px;
+  /* 문제6: 이미지들끼리 서로 10px씩 떨어질 수 있도록 만들어 보세요. */
+}
+
+footer {
+  /* 문제7: 텍스트가 가운데 정렬되도록 만들어 보세요. */
+  width: 100%;
+  border-top: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #f2f2f2;
 }
 
 section {
   border: solid 1px;
 }
-
-/* TODO */
-/* 1. h1을 정렬하세요. */
