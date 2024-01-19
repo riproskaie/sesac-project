@@ -1,0 +1,23 @@
+.box{
+  background: #FFF09E;
+  border: dashed #CCCCCC 1px;
+  width: 150px;
+  height: 100px;
+  margin: 20px;
+}
+
+.box span{
+  color: #CCCCCC;
+}
+
+#box-group2 #box2{
+
+}
+
+#box-group3 #box2{
+
+}
+
+#box-group4 .box{
+
+}
