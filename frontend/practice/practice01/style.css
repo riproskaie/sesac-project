@@ -1,5 +1,5 @@
 h5, p, span, a, strong {
-    background: #2db34a;
+    background: hsl(133, 60%, 44%);
     border-radius: 6px;
     color: #fff;
     font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
@@ -21,4 +21,9 @@ h5, p, span, a, strong {
     background: maroon;
     color: #fff;
     margin: 24px 0%;
+  }
+
+  a, span, strong {
+    width:100px;
+    /* display: block; */
   }

@@ -1,0 +1,8 @@
+ul.a {list-style-type: circle;}
+ul.b {list-style-type: square;}
+
+ol.c {list-style-type: lower-alpha;}
+ol.d {list-style-type: upper-alpha;}
+
+ol.e {list-style-type: lower-roman;}
+ol.f {list-style-type: upper-roman;}
