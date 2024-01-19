@@ -23,6 +23,10 @@ img:hover {
   transform: scale(1.1);
 }
 
+/* flex box 적용하고, 줄바꿈되게 하며(즉 wrap 사용), 가로 정렬을 center로 할 것 */
 .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 

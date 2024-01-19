@@ -1,4 +1,5 @@
-/* Task 1 */
+/* Task 1: .box와 .alternate가 같은 가로세로 규격으로 출력되도록 만들어 보아라. */
+
 .box {
     border: 5px solid rebeccapurple;
     background-color: lightgray;
@@ -10,10 +11,24 @@
   
   .alternate {
     box-sizing: border-box;
+    width: 390px; /* border*2 + padding + margin */
+    height: 240px;
   }
       
   /* Task 2 */
+  /* 이 작업에서 아래 상자를 추가합니다:
+5px, 검은색 점선 테두리.
+상단 여백 20px.
+오른쪽 여백 1em.
+아래쪽 여백 40px.
+왼쪽 여백 2em.
+모든 면에 1em의 패딩. */
   .box-standard {
-  
+    border: 5px dotted black;
+    margin-top: 20px;
+    margin-right: 1em;
+    margin-bottom: 40px;
+    margin-left: 2em;
+    padding: 1em;
   }
       

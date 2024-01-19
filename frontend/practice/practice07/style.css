@@ -1,22 +1,39 @@
 /* 모든 li 요소를 보라색으로 만듭니다 */
+li {
+    color: purple
+}
 
+/* 모든 h1과 h2를 blue로 만들기(하나의 규칙으로) */
+h1, h2 {
+    color: blue
+}
 
-/* 모든 h1과 h2를 파란색으로 만들기(하나의 규칙으로) */
+/* id가 'submit'인 요소에 green 배경색을 부여합니다 */
+#submit {
+    background-color: green
+}
 
+/* 'flavors' id를 가진 요소 내부의 스팬을 red로 만듭니다 */
+#flavors span {
+    color: red
+}
 
-/* id가 'submit'인 요소에 녹색 배경색을 부여합니다 */
+/* 'size' 클래스가 있는 요소에 텍스트 색상을 magenta로 지정합니다. */
+.size {
+    color: magenta
+}
 
-
-/* 'flavors' id를 가진 요소 내부의 스팬을 빨간색으로 만듭니다 */
-
-
-/* 'size' 클래스가 있는 요소에 텍스트 색상을 자홍색으로 지정합니다. */
-
-
-/* email input을 선택하고 주황색 배경색으로 지정합니다*/
-
+/* email input을 선택하고 orange 배경색으로 지정합니다*/
+input[type='email'] {
+    background-color: orange
+}
 
 /* href가 '.org'로 끝나는 모든 링크를 선택하고 magenta색으로 만듭니다. */
+a[href $= '.org'] {
+    color: magenta
+}
 
-
-/* 클래스가 'bright'인 h2를 선택하고(다른 요소도 같은 클래스를 가지고 있으니 주의하세요!) 청록색을 지정합니다. */
+/* 클래스가 'bright'인 h2를 선택하고(다른 요소도 같은 클래스를 가지고 있으니 주의하세요!) cyan을 지정합니다. */
+h2.bright {
+    color: cyan
+}
