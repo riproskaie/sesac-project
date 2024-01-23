@@ -1,23 +1,21 @@
-.box{
-  background: #FFF09E;
-  border: dashed #CCCCCC 1px;
+.box {
+  background: #fff09e;
+  border: dashed #cccccc 1px;
   width: 150px;
   height: 100px;
   margin: 20px;
 }
 
-.box span{
-  color: #CCCCCC;
+.box span {
+  color: #cccccc;
 }
 
-#box-group2 #box2{
-
+#box-group2 #box2 {
 }
 
-#box-group3 #box2{
-
+#box-group3 #box2 {
 }
 
-#box-group4 .box{
-
+#box-group4 .box {
+  display: block;
 }
