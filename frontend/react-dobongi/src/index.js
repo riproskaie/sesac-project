@@ -10,6 +10,8 @@ root.render(
     <App /> 
   </React.StrictMode>
 );
+// (도봉이 실습 한정) React.StrictMode를 살려둔 상태여야 렌더링 에러가 뜨지 않는다
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
