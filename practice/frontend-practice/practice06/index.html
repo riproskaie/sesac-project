@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    
+    <title>Practice</title>
+</head>
+<body>
+  <content>
+    <section id="standard">
+      <h2>Standard Selectors <span style="font-size:14px;">(click the down arrows for examples)</span></h2>
+      <article class="open">
+        <h3><span>
+          .class</span> for Class Selector
+        </h3><span>
+          Let's highlight any element with class <span>
+          .world</span></span>
+        <div class="class">
+          <div class="hello">&lt;div class=&quot;hello&quot;&gt;</div>
+          <div class="world">&lt;div class=&quot;world&quot;&gt;</div>
+          <div class="wide">&lt;div class=&quot;wide&quot;&gt;</div>
+          <div class="web">&lt;div class=&quot;web&quot;&gt;</div>
+          <div class="world class">&lt;div class=&quot;world class&quot;&gt;</div>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+          #id</span> for ID's
+        </h3><span>
+          Let's select an element by ID <span>
+          #john</span></span>
+        <div class="id">
+          <div id="john">&lt;div id=&quot;john&quot;&gt;</div>
+          <div id="doe">&lt;div id=&quot;doe&quot;&gt;</div>
+          <div id="johnathan">&lt;div id=&quot;johnathan&quot;&gt;</div>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+          *</span> for each element
+        </h3><span>
+          Let's select any element <span>
+          *</span></span>
+        <div class="e">
+          <span>&lt;span&gt;</span>
+          <div>&lt;div&gt;</div>
+          <div>&lt;div&gt;</div>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+          name</span> for element names
+        </h3><span>
+          Let's select any <span>
+          span</span> element</span>
+        <div class="name">
+          <span>&lt;span&gt;</span>
+          <div>&lt;div&gt;</div>
+          <div>&lt;div&gt;</div>
+          <span>&lt;span&gt;</span>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+        elem, elem</span> elem and elem Selector
+        </h3><span>
+        Let's group multiple selectors and find both <span>
+        .hello</span> and <span>span</span> elements by seperating them with commas: <span>.hello, span</span></span>
+        <div class="and">
+          <div class="hello">&lt;div class=&quot;hello&quot;&gt;</div>
+          <div>&lt;div&gt;</div>
+          <span>&lt;span&gt;</span>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+    </section>
+    <section  id="hierarchy">
+      <h2>Hierarchical Selectors <span style="font-size:14px;">(click the down arrows for examples)</span></h2>
+      <article class="open">
+        <h3><span>
+        elem elem</span> for all nested descendants (children, grand children, great grand children etc...)
+        </h3><span>
+        Let's select only those <span>span</span> elements that are descendants (children, grand-children, great grand-children etc...) of any element with class <span>
+        .hello</span>:  <span>.hello span</span></span>.
+        <br>We do this by ensuring there is a space between the ancestor <span>.hello</span> and the descendant <span>span</span>.
+        <div class="inside">
+          <div class="hello">&lt;div class=&quot;hello&quot;&gt;<span>&lt;span&gt;<span>&lt;span&gt;</span></span>
+          </div><span>&lt;span&gt;</span>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+        elem > elem</span> for direct nested elements
+        </h3><span>
+        Let's select any direct child (first level descendant) of <span>.hello</span> that is a <span>span</span>element by invoking the <span> > </span> symbol: <span>
+        .hello > span</span></span>
+        <div class="direct">
+          <div>&lt;div&gt;<span>&lt;span&gt;<span>&lt;span&gt;<span>&lt;span&gt;</span></span>
+            </span>
+          </div>
+          <span>&lt;span&gt;</span>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+        elem + elem</span> for elements placed after elements. 'Younger Sibling' elements.
+        </h3><span>
+        Let's select <span>span</span> elements that follow other <span>span</span> elements by using the <span>+</span> character: <span>
+        span + span</span></span>
+        <div class="pl_after">
+          <div>&lt;div&gt;
+            <span>&lt;span&gt;
+              <span>&lt;span&gt;</span>
+            <span>&lt;span&gt;</span>
+            <span>&lt;span&gt;</span>
+            </span>
+            <span>&lt;span&gt;</span>
+          </div>
+          <span>&lt;span&gt;</span>
+          <span>&lt;span&gt;</span>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+        elem ~ elem</span> elements who are preceeded by a specific 'older sibling'
+        </h3><span>
+          Select any <span>span</span> element that is preceeded by an older sibling <span>div</span> <span>
+        div ~ span</span></span>
+        <div class="all_after">
+          <span>&lt;span&gt;</span>
+          <span>&lt;span&gt;</span>
+          <div>&lt;div&gt;
+            <span>&lt;span&gt;</span>
+            <div>&lt;div&gt;</div>
+            <span>&lt;span&gt;</span>
+          </div>
+          <p>&lt;p&gt;</p>
+          <span>&lt;span&gt;</span>
+          <span>&lt;span&gt;</span>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+    </section>
+    <section id="attribute">
+      <h2 >Attribute Selectors <span style="font-size:14px;">(click the down arrows for examples)</span></h2>
+      <article class="open">
+        <h3><span>
+        [attr]</span> for any element that has an html attribute named attr
+        </h3><span>
+        Select any element that has an html attribute: <span>
+        [data-x]</span></span>
+        <div class="attr">
+          <div data-x>&lt;div data-x=&quot;hello&quot;&gt;</div>
+          <span data-x>&lt;span data-x&gt;</span>
+          <span>&lt;span&gt;</span>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+        [attr="value"]</span> for any element that has the html attribute AND has the given value
+        </h3><span>
+        Select a element by <span>
+        [name="john"]</span></span>
+        <div class="attr_val">
+          <div name="john">&lt;div name=&quot;john&quot;&gt;</div>
+          <span name="doe">&lt;span name=&quot;doe&quot;&gt;</span>
+          <span name="john">&lt;span name=&quot;john&quot;&gt;</span>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+        [attr~="value"]</span> for any element that has an html attribute containing the whole word "value" - Note this looks for the whole word (with surrounding spaces), unlike the next selector (which looks for the patterns of letters as a combination anywhere in the attribute values).
+        </h3><span>
+        Select a element by <span>
+        [name~="hello"]</span></span>
+        <div class="attr_contval">
+          <div name="john hello">&lt;div name=&quot;john hello&quot;&gt;</div>
+          <span name="doe">&lt;span name=&quot;doe&quot;&gt;</span>
+          <span name="hello_john">&lt;span name=&quot;hello_john&quot;&gt;</span>
+          <span name="hellonearth">&lt;span name=&quot;hellonearth&quot;&gt;</span>
+          <span name="ahellofagoodtime">&lt;span name=&quot;ahellofagoodtime&quot;&gt;</span>
+          <div name="hello world">&lt;div name=&quot;hello world&quot;&gt;</div>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+        [attr*="value"]</span> for any element that has the characters 'value' appear anywhere - Note this is different from the previous example looking for the whole word (with surrounding spaces). This selector looks anywhere within any word for the pattern of letters as in the attribute values).
+        </h3><span>
+        Select a element by <span>
+        [name*="hello"]</span></span>
+        <div class="attr_subval">
+          <div name="john hello">&lt;div name=&quot;john hello&quot;&gt;</div>
+          <span name="doe">&lt;span name=&quot;doe&quot;&gt;</span>
+          <span name="hello_john">&lt;span name=&quot;hello_john&quot;&gt;</span>
+          <span name="hellonearth">&lt;span name=&quot;hellonearth&quot;&gt;</span>
+          <span name="ahellofagoodtime">&lt;span name=&quot;ahellofagoodtime&quot;&gt;</span>
+          <div name="hello world">&lt;div name=&quot;hello world&quot;&gt;</div>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+        [attr^="value"]</span> for any element that has an html attribute that starts whith the substring (pattern of characters) "value"
+        </h3><span>
+        Select a element by <span>
+        [name^="horse"]</span></span>
+        <div class="attr_startval">
+          <span name="horse">&lt;span name=&quot;horse&quot;&gt;</span>
+          <div name="alone horse">&lt;div name=&quot;alone horse&quot;&gt;</div>
+          <div name="horse alone">&lt;div name=&quot;horse alone&quot;&gt;</div>
+          <span name="horse_group">&lt;span name=&quot;horse_group&quot;&gt;</span>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+        [attr|="value"]</span>
+        </h3><span>
+        Selects all elements who have a value at the start of a dash-separated list of attribute values matches the selector. <span>
+        [name|="ho"]</span></span>
+        <div class="attr_start2val">
+          <span name="horse">&lt;span name=&quot;horse&quot;&gt;</span>
+          <div name="alone horse">&lt;div name=&quot;alone horse&quot;&gt;</div>
+          <div name="horse-alone">&lt;div name=&quot;horse-alone&quot;&gt;</div>
+          <span name="horse_group">&lt;span name=&quot;horse_group&quot;&gt;</span>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+        [attr$="value"]</span> for any element that has an html attribute that ends with the substring "value"
+        </h3><span>
+        Select a element by <span>
+        [name$="horse"]</span></span>
+        <div class="attr_endval">
+          <span name="horse">&lt;span name=&quot;horse&quot;&gt;</span>
+          <div name="alone horse">&lt;div name=&quot;alone horse&quot;&gt;</div>
+          <div name="horse alone">&lt;div name=&quot;horse alone&quot;&gt;</div>
+          <span name="group_horse">&lt;span name=&quot;group_horse&quot;&gt;</span>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+    </section>
+  
+    <section id="pseudo">
+      <h2 >Pseudo Selectors <span style="font-size:14px;">(click the down arrows for examples)</span></h2>
+      <article class="open">
+        <h3><span>
+        :hover</span> for any element the user mouses over
+        </h3><span>
+        Select any div element the user hovers over: <span>div:hover</span></span>
+        <div class="pseudo-hover">
+          <div class="hello">&lt;div class=&quot;hello&quot;&gt;</div>
+          <span>&lt;span&gt;
+            <div>&lt;div&gt;</div>
+        </span>
+          <div>&lt;div&gt;</div>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+        :first-child</span> the first element within a parent.
+        </h3><span>
+        Select the first child element of any parent if it is a span tag: <span>span:first-child</span></span>
+        <div class="pseudo-first-child">
+          <div class="hello">&lt;div class=&quot;hello&quot;&gt;</div>
+          <span>&lt;span&gt;</span>
+          <div>&lt;div&gt;
+            <span>&lt;span&gt;</span>
+            <span>&lt;span&gt;    
+              <span>&lt;span&gt;</span>
+            <span>&lt;span&gt;</span>
+            </span>
+            <span>&lt;span&gt;    
+              <p>&lt;p&gt;</p> 
+              <p>&lt;p&gt;</p>
+            </span>
+            <span>&lt;span&gt;</span>
+            <span>&lt;span&gt;</span>
+          </div>
+  
+          <span>&lt;span&gt;</span>
+          <div>&lt;div&gt;</div>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+        :last-child</span> the last element within a parent.
+        </h3><span>
+        Select the last child element of any parent if it is a span tag: <span>span:last-child</span></span>
+        <div class="pseudo-last-child">
+          <div class="hello">&lt;div class=&quot;hello&quot;&gt;</div>
+          <span>&lt;span&gt;</span>
+          <div>&lt;div&gt;
+            <span>&lt;span&gt;</span>
+            <span>&lt;span&gt;    
+              <span>&lt;span&gt;</span>
+            <span>&lt;span&gt;</span>
+            </span>
+            <span>&lt;span&gt;    
+              <p>&lt;p&gt;</p> 
+              <p>&lt;p&gt;</p>
+            </span>
+            <span>&lt;span&gt;</span>
+            <span>&lt;span&gt;</span>
+          </div>
+  
+          <span>&lt;span&gt;</span>
+          <div>&lt;div&gt;</div>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+        :first-of-type </span> the first html element of a type amongst siblings (within a parent).
+        </h3><span>
+        Select the first occurence of a <span>&lt;p&rt;</span> element amongst siblings: <span>p:first-of-type</span></span>
+        <div class="pseudo-first-of-type">
+          <span>&lt;span&gt;
+          <div>&lt;div&gt;
+  
+          <div>&lt;div&gt;</div>
+                    <p>&lt;p&gt;</p>
+          <span>&lt;span&gt;</span>
+          <span>&lt;span&gt;</span>
+  
+          <p>&lt;p&gt;</p>
+          <p>&lt;p&gt;</p>
+        </div>
+        <span>&lt;span&gt;</span>
+        <p>&lt;p&gt;</p>
+        <p>&lt;p&gt;</p>
+        <div>&lt;div&gt;</div>
+        </span>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+        :last-of-type </span> the last html element of a type amongst siblings (within a parent).
+        </h3><span>
+        Select the last occurence of a <span>&lt;p&rt;</span> element amongst siblings: <span>p:last-of-type</span></span>
+        <div class="pseudo-last-of-type">
+          <span>&lt;span&gt;
+          <div>&lt;div&gt;
+  
+          <div>&lt;div&gt;</div>
+                    <p>&lt;p&gt;</p>
+          <span>&lt;span&gt;</span>
+          <span>&lt;span&gt;</span>
+  
+          <p>&lt;p&gt;</p>
+          <p>&lt;p&gt;</p>
+        </div>
+        <span>&lt;span&gt;</span>
+        <p>&lt;p&gt;</p>
+        <p>&lt;p&gt;</p>
+        <div>&lt;div&gt;</div>
+        </span>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+        :only-of-type </span> only single occurences of an html element amongst siblings (within a parent).
+        </h3><span>
+        Select a <span>&lt;span&gt;</span> if it is the only tag of it's type amongst siblings: <span>span:only-of-type</span></span>
+        <div class="pseudo-only-of-type">
+          <span>&lt;span&gt;
+          <div>&lt;div&gt;
+  
+          <div>&lt;div&gt;</div>
+                    <p>&lt;p&gt;</p>
+          <span>&lt;span&gt;</span>
+          <span>&lt;span&gt;</span>
+  
+          <p>&lt;p&gt;</p>
+          <p>&lt;p&gt;</p>
+        </div>
+        <span>&lt;span&gt;</span>
+        <p>&lt;p&gt;</p>
+        <p>&lt;p&gt;</p>
+        <div>&lt;div&gt;</div>
+        </span>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+       <article class="open">
+        <h3><span>
+          :not(<em>simple selector</em>)</span> for any element that doesn't match the given selector
+        </h3><span>
+         Select any element that doesn't have class <span>.hello</span>: <span>:not(.hello)</span></span>
+        <div class="pseudo-not">
+          <div class="hello">&lt;div class=&quot;hello&quot;&gt;</div>
+          <span>&lt;span&gt;
+            <div>&lt;div&gt;</div>
+              <p class="hello">&lt;p class=&quot;hello&quot;&gt;</p>
+              <p>&lt;p&gt;</p>
+  
+        </span>
+          <div>&lt;div&gt;</div>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+          ::first-line</span> for the first line of any piece of inline text content
+        </h3><span>
+         Highlight the first line of every paragraph: <span> p::first-line{background-color:cyan;}</span></span>
+        <p><br/>Resize your browser to see how this changes as the first line changes</p>
+        <div class="pseudo-first-line">
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quia veniam, tempora. In modi, et eligendi reiciendis debitis ullam voluptate necessitatibus beatae. Quod, nesciunt. Sequi nostrum repellendus minima assumenda magnam.   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quia veniam, tempora. In modi, et eligendi reiciendis debitis ullam voluptate necessitatibus beatae. Quod, nesciunt. Sequi nostrum repellendus minima assumenda magnam.</p>
+           <p style="width:50%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quia veniam, tempora. In modi, et eligendi reiciendis debitis ullam voluptate necessitatibus beatae. Quod, nesciunt. Sequi nostrum repellendus minima assumenda magnam.   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quia veniam, tempora. In modi, et eligendi reiciendis debitis ullam voluptate necessitatibus beatae. Quod, nesciunt. Sequi nostrum repellendus minima assumenda magnam.</p>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+          ::first-letter</span> for the first letter of inline content
+        </h3><span>
+         Highlight and increase the font size of the first letter of every paragraph: <span> p::first-letter{background-color:cyan; font-size:60px;}</span></span>
+        <div class="pseudo-first-letter">
+           <p>KLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quia veniam, tempora. In modi, et eligendi reiciendis debitis ullam voluptate necessitatibus beatae. Quod, nesciunt. Sequi nostrum repellendus minima assumenda magnam.   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quia veniam, tempora. In modi, et eligendi reiciendis debitis ullam voluptate necessitatibus beatae. Quod, nesciunt. Sequi nostrum repellendus minima assumenda magnam.</p>
+           <p style="width:50%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quia veniam, tempora. In modi, et eligendi reiciendis debitis ullam voluptate necessitatibus beatae. Quod, nesciunt. Sequi nostrum repellendus minima assumenda magnam.   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quia veniam, tempora. In modi, et eligendi reiciendis debitis ullam voluptate necessitatibus beatae. Quod, nesciunt. Sequi nostrum repellendus minima assumenda magnam.</p>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+      <article class="open">
+        <h3><span>
+          :disabled</span> for any element that is disabled
+        </h3><span>
+        Select input elements that are <span>&lt;input disabled&gt;</span>: <span> input:disabled</span></span>
+        <p><br/>Resize your browser to see how this changes as the first line changes</p>
+        <div class="pseudo-disabled">
+            <form action="#">
+              <label for="name">Enabled Input:</label>
+              <input type="text" autofocus>
+              <label for="name">Disabled Input:</label>
+              <input type="text" disabled>
+          </form>  
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+       <article class="open">
+      <h3><span>
+        :empty</span> for any element that has no content or child elements
+      </h3><span>
+      Select any elements that have no content: <span> *:empty</span></span>
+         <div class="pseudo-empty">
+        <span>&lt;span&gt;
+        <div>&lt;div&gt;
+  
+        <div>&lt;div&gt; <b></b></div>
+                  <p>&lt;p&gt; <b></b></p>
+        <span>&lt;span&gt; Lorem Ipsum Dolor</span>
+        <span>&lt;span&gt; <b></b></span>
+      </div>
+  
+          <p>&lt;p&gt;
+            <b></b>
+          </p>
+      <div>&lt;div&gt; <b></b></div>
+      </span>
+      </div>
+      <span class="opener" title="Show more">&dArr;</span>
+    </article>
+       <article class="open">
+        <h3><span>
+          nth-child(N)</span> select any element with number N, or 'odd' and 'even' elements
+        </h3><span>
+        Select every other / even li element: <span> li:nth-child(even)</span></span>
+        <div class="pseudo-odd">
+             <ul>
+                <li>&lt;li&gt; hey</li>
+                <li>&lt;li&gt; ho</li>
+                <li>&lt;li&gt; hey</li>
+                <li>&lt;li&gt; ho</li>
+                <li>&lt;li&gt; hey</li>
+                <li>&lt;li&gt; ho</li>
+            </ul>
+        </div>
+        <span class="opener" title="Show more">&dArr;</span>
+      </article>
+    </section>
+  </content>
+  <script src="./main.js"></script>
+</body>
+</html>

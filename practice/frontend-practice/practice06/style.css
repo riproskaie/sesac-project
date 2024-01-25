@@ -1,0 +1,182 @@
+
+  header{
+	line-height: 70px;
+	background-color: rgb(26,32,44);
+	color: rgb(225,236,231);
+	padding: 0 70px;
+  }
+  h1{
+	display: inline-block;
+  }
+  header span{
+	padding: 0 10px;
+	font-size: .7em;
+	color: rgb(130,130,130);
+  }
+  a{
+	color: #cceeff;
+	margin-right:10px;
+	text-decoration: none;
+	transition: all .3s;
+	text-decoration:underline;
+  }
+  a:hover{
+	color: rgb(190,190,190);
+  }
+  section{
+	padding: 40px;
+  }
+  h2{
+	padding: 10px 30px;
+	font-weight: normal;
+	color: rgb(26,32,44);
+  }
+  h3{
+	color: rgb(130,130,130);
+	margin-bottom: .4em;
+	font-weight: normal;
+	display: inline-block;
+  }
+  h3+span{display:block;
+	margin-top:10px;
+	line-height:24px;
+	background-color:#F9F7F0;}
+  h3 span{
+	display: inline-block;
+	color: rgb(0,0,0);
+	background-color: rgba(0,0,0, .1);
+	padding: 0 5px;
+  }
+  article{
+	padding: 30px;
+	background-color: rgb(255,255,255);
+	position: relative;
+	overflow:hidden;
+  }
+  article+article{
+	margin: 20px 0;
+  }
+  article>span{
+	color: rgb(100,100,100);  
+	padding: 0 10px;
+  }
+  article>span>span{
+	display: inline-block;
+	color: rgb(0,0,0);
+	background-color: rgba(0,0,0, .1);
+	padding: 0 5px;
+  }
+  article>div{
+	background: rgba(26,32,44, .1);
+	color: rgb(255,255,255);
+	max-height: 0px;
+	overflow: hidden;
+	transition: all .5s;
+  }
+  article.open>div{
+	max-height: 600px;
+	margin-top: 20px;
+	padding: 10px;
+	transition: all 1s;
+  }
+  article>div *{
+	background-color: rgba(26,32,44, .3);
+	padding: 10px;
+	color: rgb(70,70,70);
+	display: block;
+  }
+  article>div *+*{
+	margin-top: 10px;
+  }
+  article>div * *{
+	margin-top: 5px;
+  }
+  
+  article .opener{
+	font-size:24px;
+	margin-left:-5px;
+	margin-top:20px;
+	position:absolute;
+	top:0;
+	right:0;
+  }
+  
+  article .opener{
+	position: absolute;
+	bottom: 7px;
+	transition: all .4s;
+	cursor: pointer;
+  }
+  article.open .opener{
+	transform: rotate(-180deg);
+  }
+  /* =============================================
+	==============================================
+	And now.... the Selectors in ACTION: =========
+	==============================================
+	=========================================== */
+  .class .world{
+	background-color: rgba(220,43,104, .3);
+	color: rgb(0,0,0);
+  }
+  .id #john{
+	background-color: rgba(220,43,104, .3);
+	color: rgb(0,0,0);
+  }
+  .e *{
+	background-color: rgba(220,43,104, .3);
+	color: rgb(0,0,0);
+  }
+  .name span{
+	background-color: rgba(220,43,104, .3);
+	color: rgb(0,0,0);
+  }
+  .and .hello,
+  .and span{
+	background-color: rgba(220,43,104, .3);
+	color: rgb(0,0,0);
+  }
+  .inside .hello span{
+	background-color: rgba(220,43,104, .3);
+	color: rgb(0,0,0);
+  }
+  .direct div>span{
+	background-color: rgba(220,43,104, .3);
+	color: rgb(0,0,0);
+  }
+  .pl_after span + span{
+	background-color: rgba(220,43,104, .3);
+	color: rgb(0,0,0);
+  }
+  .all_after div ~ span{
+	background-color: rgba(220,43,104, .3);
+	color: rgb(0,0,0);
+  }
+  .attr [data-x]{
+	background-color: rgba(220,43,104, .3);
+	color: rgb(0,0,0);
+  }
+  .attr_val [name="john"]{
+	background-color: rgba(220,43,104, .3);
+	color: rgb(0,0,0);
+  }
+  .attr_contval [name~="hello"]{
+	background-color: rgba(220,43,104, .3);
+	color: rgb(0,0,0);
+  }
+  .attr_subval [name*="hello"]{
+	background-color: rgba(220,43,104, .3);
+	color: rgb(0,0,0);
+  }
+  .attr_startval [name^="horse"]{
+	background-color: rgba(220,43,104, .3);
+	color: rgb(0,0,0);
+  }
+  .attr_start2val [name|="horse"]{
+	background-color: rgba(220,43,104, .3);
+	color: rgb(0,0,0);
+  }
+  .attr_endval [name$="horse"]{
+	background-color: rgba(220,43,104, .3);
+	color: rgb(0,0,0);
+  }
