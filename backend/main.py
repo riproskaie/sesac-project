@@ -3,7 +3,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import openai
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv("../../.env"))
 from scipy.spatial.distance import cosine
 import os
 from openai import OpenAI
@@ -14,8 +16,8 @@ class ChatInput(BaseModel):
     user_input: Optional[str] = None
 
 
+load_dotenv("../data/practice/.env")
 client = OpenAI()
-load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 app = FastAPI()
@@ -56,6 +58,7 @@ def answer_question(question, df, max_len=3000, debug=False):
     if debug:
         print("Context:\n" + context)
 
+    # 내가 고쳐야 될 것은 이 부분이다.
     try:
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
