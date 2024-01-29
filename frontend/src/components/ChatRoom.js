@@ -1,4 +1,3 @@
-import NavBar from "./NavBar";
 import React, { useState } from "react";
 
 const ChatRoom = () => {
@@ -13,6 +12,7 @@ const ChatRoom = () => {
     const userMessage = userInput.trim();
     console.log(userMessage);
     if (!userMessage) return;
+    setUserInput(''); // 입력창 초기화
 
     // Add user message to chat history
     setChatHistory([...chatHistory, { sender: "User", message: userMessage }]);
@@ -34,7 +34,7 @@ const ChatRoom = () => {
       console.log(responseData);
       setChatHistory((prevHistory) => [
         ...prevHistory,
-        { sender: "도봉이", message: responseData.도봉이 },
+        { sender: "윤치호", message: responseData.윤치호 },
       ]);
     } catch (error) {
       console.error("Error sending message:", error);
@@ -46,19 +46,20 @@ const ChatRoom = () => {
   };
 
   return (
-    <section className=" flex flex-col">
-      <h1 className="text-center text-3xl font-bold mb-4">도봉이와의 대화방</h1>
+    <section className=" flex flex-col font-sans">
+      <h1 className="text-center text-3xl font-serif font-bold mb-4">Talk to T.H.Y. (Tchi Ho Yun)</h1>
       <div className="w-full mx-auto my-4 max-w-2xl flex flex-row">
         <div className="w-full mx-auto max-w-3xl h-[80vh] pt-2 flex flex-row">
-          <NavBar />
           <div className="w-full">
-            <div className="h-[70%] w-full border border-gray-300 mb-4 p-2 overflow-y-scroll">
+            <div className="h-[70%] w-full mb-4 p-2 overflow-y-scroll">
               {/* Display chat history */}
               {chatHistory.map((chat, index) => (
                 <div
                   key={index}
-                  className={`message ${
-                    chat.sender === "User" ? "user" : "도봉이"
+                  className={`bg-[#f5f2e9] ${
+                    chat.sender === "User" ? "float-right bg-[#f5f2e9]" : "clear-right bg-[#292524] text-gray-50"
+                  } rounded-lg mb-3 p-3 text-sm font-sans text-black max-w-[60%] message ${
+                    chat.sender === "User" ? "user" : "윤치호"
                   }`}
                 >
                   <p>
@@ -78,7 +79,7 @@ const ChatRoom = () => {
               />
               <button
                 onClick={sendMessage}
-                className="w-1/5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className="w-1/5 bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
               >
                 보내기
               </button>

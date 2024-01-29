@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 w-full bg-gray-50 border-b border-gray-300 z-50">
+    <header className="fixed font-sans top-0 w-full bg-gray-50 border-b border-gray-300 z-50">
       <nav className="bg-gray-800 text-center">
         <ul className="list-none m-0 p-0 overflow-hidden">
           <li className="inline-block p-2 w-1/5">
@@ -16,18 +16,10 @@ const Header = () => {
           </li>
           <li className="inline-block p-2 w-1/5">
             <a
-              href="news"
-              className="text-white no-underline block hover:bg-gray-900"
-            >
-              도봉이 근황 보기
-            </a>
-          </li>
-          <li className="inline-block p-2 w-1/5">
-            <a
               href="contact"
               className="text-white no-underline block hover:bg-gray-900"
             >
-              도봉이 만든 사람 소개
+              About 개발자
             </a>
           </li>
           <li className="inline-block p-2 w-1/5">
@@ -35,7 +27,7 @@ const Header = () => {
               href="about"
               className="text-white no-underline block hover:bg-gray-900"
             >
-              도봉이는...
+              About 윤치호
             </a>
           </li>
         </ul>
