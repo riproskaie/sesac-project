@@ -87,7 +87,7 @@ def answer_question(question, df, max_len=3000, debug=False):
 @app.post("/chat")
 async def chat(input_data: ChatInput):
     user_input = input_data.user_input
-    df = pd.read_pickle("../data/processed/thy_embedding_64.pkl")
+    df = pd.read_pickle("data/processed/thy_embedding_64.pkl")
     fine_tuned_model_id = "ft:gpt-3.5-turbo-0613:personal:recipe-ner:8lCI2Bmk"
 
     if user_input is None:

@@ -57,7 +57,7 @@ const ChatRoom = () => {
                 <div
                   key={index}
                   className={`bg-[#f5f2e9] ${
-                    chat.sender === "User" ? "float-right bg-[#f5f2e9]" : "clear-right bg-[#292524] text-gray-50"
+                    chat.sender === "User" ? "float-right bg-slate-200" : "clear-right bg-black text-gray-50"
                   } rounded-lg mb-3 p-3 text-sm font-sans text-black max-w-[60%] message ${
                     chat.sender === "User" ? "user" : "윤치호"
                   }`}
